@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-# Configuração estética padronizada para relatórios executivos
+# Configuração estética 
 sns.set_theme(style="whitegrid")
 plt.rcParams.update(
     {
@@ -15,7 +15,7 @@ plt.rcParams.update(
 )
 
 # -----------------------------------------------------------------------------
-# 1. ENGENHARIA DE DADOS (Processamento do Dataset Olist)
+# 1. Processamento do Dataset Olist
 # -----------------------------------------------------------------------------
 """
 Exemplo de carregamento e merge das tabelas Olist:
@@ -41,7 +41,6 @@ df['status_prazo'] = np.where(df['dias_atraso'] <= 0, 'No Prazo',
 # -----------------------------------------------------------------------------
 # 2. GRÁFICO 1: TEMPO MÉDIO DE ENTREGA REAL POR ESTADO DESTINO
 # -----------------------------------------------------------------------------
-# Dados consolidados conforme apresentação
 dados_estados = pd.DataFrame(
     {
         "Estado": ["São Paulo (SP)", "Rio de Janeiro (RJ)", "Bahia (BA)", "Ceará (CE)"],
@@ -115,7 +114,7 @@ bars_sat = ax.bar(
     width=0.45,
 )
 
-# Adicionando os valores numéricos acima das colunas
+# Adicionando os valores numéricos
 for bar in bars_sat:
     height = bar.get_height()
     ax.text(
