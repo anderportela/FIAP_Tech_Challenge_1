@@ -17,8 +17,7 @@ plt.rcParams.update(
 # -----------------------------------------------------------------------------
 # 1. Processamento do Dataset Olist
 # -----------------------------------------------------------------------------
-"""
-Exemplo de carregamento e merge das tabelas Olist:
+
 orders = pd.read_csv('olist_orders_dataset.csv')
 reviews = pd.read_csv('olist_order_reviews_dataset.csv')
 customers = pd.read_csv('olist_customers_dataset.csv')
